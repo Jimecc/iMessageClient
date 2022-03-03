@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jim.view.controller.ChatViewController">
+    <children>
+        <Pane layoutX="64.0" prefHeight="57.0" prefWidth="230.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <TextField focusTraversable="false" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="170.0" promptText="   ✔ 搜索 ..." style="-fx-background-color: #eaeaea; -fx-background-radius: 8;">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="buttonAddFriends" focusTraversable="false" layoutX="189.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_addFriend" prefHeight="28.0" prefWidth="29.0" style="-fx-background-color: #ebeaea; -fx-background-radius: 5;" text="  + " textFill="#797979">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Pane layoutX="297.0" prefHeight="57.0" prefWidth="604.0" style="-fx-background-color: #f7f7f7;">
+            <children>
+                <Label focusTraversable="false" layoutX="21.0" layoutY="19.0" text="Jim" textFill="#252525">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <TextArea layoutX="301.0" layoutY="469.0" prefHeight="122.0" prefWidth="592.0" promptText="  请输入聊天内容......" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff; -fx-background-radius: 6;">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </TextArea>
+        <Pane prefHeight="600.0" prefWidth="64.0" style="-fx-background-color: #e0e1e1;">
+            <children>
+                <Button focusTraversable="false" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="44.0" text="☁">
+                    <font>
+                        <Font name="Gujarati Sangam MN" size="18.0" />
+                    </font>
+                </Button>
+                <Button focusTraversable="false" layoutX="10.0" layoutY="161.0" mnemonicParsing="false" text="☃">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button layoutX="10.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_buttonTest" text="测试" />
+            <Button fx:id="button_layout" layoutX="10.0" layoutY="526.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_buttonLayout" prefHeight="39.0" prefWidth="42.0" text="⏎" />
+            </children></Pane>
+        <ListView fx:id="listView_friends" fixedCellSize="60.0" focusTraversable="false" layoutX="64.0" layoutY="57.0" prefHeight="544.0" prefWidth="230.0">
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor></ListView>
+      <Pane layoutX="293.0" layoutY="57.0" prefHeight="365.0" prefWidth="619.0">
+         <children>
+              <Label fx:id="labelM1" layoutX="28.0" layoutY="212.0" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #f3f3f3#f3f3f3;" text="你好啊树">
+                  <font>
+                      <Font size="18.0" />
+                  </font>
+              </Label>
+              <Label fx:id="labelM2" layoutX="474.0" layoutY="309.0" prefHeight="36.0" prefWidth="125.0" style="-fx-background-color: #95ec69;" text="你好啊,Jim">
+                  <font>
+                      <Font name="Trebuchet MS" size="18.0" />
+                  </font>
+              </Label>
+            <Pane layoutX="70.0" layoutY="14.0" prefHeight="68.0" prefWidth="243.0" />
+            <ListView fx:id="listView_chatMessage" fixedCellSize="60.0" prefHeight="365.0" prefWidth="619.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="293.0" layoutY="419.0" prefHeight="57.0" prefWidth="619.0" style="-fx-background-color: #ffffff;">
+         <children>
+              <Button focusTraversable="false" layoutX="6.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: #ffffff; -fx-background-radius: 3;" text=" ☺ " textFill="#404040">
+                  <font>
+                      <Font size="22.0" />
+                  </font>
+              </Button>
+              <Button layoutX="46.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: #ffffff; -fx-background-radius: 3;" text=" ✉ " textFill="#404040">
+                  <font>
+                      <Font size="22.0" />
+                  </font>
+              </Button>
+              <Button focusTraversable="false" layoutX="88.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: #ffffff #ffffff; -fx-background-radius: 3;" text=" ✄" textFill="#404040">
+                  <font>
+                      <Font size="22.0" />
+                  </font>
+              </Button>
+              <Button focusTraversable="false" layoutX="130.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: #ffffff #ffffff; -fx-background-radius: 3;" text=" ☃ " textFill="#404040">
+                  <font>
+                      <Font size="22.0" />
+                  </font>
+              </Button>
+              <Button focusTraversable="false" layoutX="561.0" layoutY="4.0" mnemonicParsing="false" style="-fx-background-color: #ffffff; -fx-background-radius: 3;" text=" ☎ " textFill="#404040">
+                  <font>
+                      <Font size="22.0" />
+                  </font>
+              </Button>
+         </children>
+      </Pane>
+        <Line endX="510.0" layoutX="394.0" layoutY="420.0" opacity="0.38" startX="-100.0" stroke="#bcbcbc" strokeWidth="1.5" />
+          <Line endX="294.0" endY="601.0" startX="293.9999694824219" startY="57.000003814697266" stroke="#d0d0d0" strokeWidth="2.0" />
+    </children>
+</AnchorPane>
